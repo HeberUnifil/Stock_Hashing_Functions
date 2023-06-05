@@ -134,7 +134,7 @@ public class Main {
                                 break;
 
                             case 4:
-                                vnome.show();
+                                vcodigo.show();
                                 break;
 
                             case 0:
