@@ -30,12 +30,15 @@ public class Vetor<T> {
         if (value instanceof Long) {
             this.vetor[hash((long) value)] = value;
             System.out.println("O objeto inserido!");
+            System.out.println("________________");
         } else if (value instanceof String) {
             this.vetor[hash(codify((String) value))] = value;
             System.out.println("O objeto inserido!");
+            System.out.println("________________");
         } else if (value instanceof Double) {
             this.vetor[hash(longfy((double) value))] = value;
             System.out.println("O objeto inserido!");
+            System.out.println("________________");
         }
     }
 
@@ -57,10 +60,13 @@ public class Vetor<T> {
     public void find(T value) {
         if (value instanceof Long) {
             System.out.println("O objeto está localizado no index: " + (hash((long) value) + 1));
+            System.out.println("________________");
         } else if (value instanceof String) {
             System.out.println("O objeto está localizado no index: " + (hash(codify((String) value)) + 1));
+            System.out.println("________________");
         } else if (value instanceof Double) {
             System.out.println("O objeto está localizado no index: " + (hash(longfy((double) value)) + 1));
+            System.out.println("________________");
         }
     }
 
@@ -72,12 +78,15 @@ public class Vetor<T> {
         if (value instanceof Long) {
             this.vetor[hash((long) value)] = null;
             System.out.println("O objeto foi apagado do index: " + (hash((long) value) + 1));
+            System.out.println("________________");
         } else if (value instanceof String) {
             this.vetor[hash(codify((String) value))] = null;
             System.out.println("O objeto foi apagado do index: " + hash(codify((String) value) + 1));
+            System.out.println("________________");
         } else if (value instanceof Double) {
             this.vetor[hash(longfy((double) value))] = null;
             System.out.println("O objeto foi apagado do index: " + hash(longfy((double) value) + 1));
+            System.out.println("________________");
         }
     }
 
@@ -104,7 +113,6 @@ public class Vetor<T> {
      * @return int This returns the index of the vector which the value will be inserted.
      */
     private long codify(String word) {
-        Character[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'};
         long code = 0;
         int len = word.length();
         Character[] array = new Character[len];
