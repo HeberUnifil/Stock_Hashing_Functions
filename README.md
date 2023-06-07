@@ -1,4 +1,9 @@
 # Stock_Hashing_Functions - Projeto de TAD e Função Hash
+## Participantes
+- Felipe Bertoli Oliveira
+- Heber José da Silva Junior
+- João Pedro Brustolin Szlachta
+- Rafael Haruo Nakagawa Hoshino
 
 Defina um grupo de 1 a 4 pessoas para realizar o desenvolvimento do seguinte projeto:
 
