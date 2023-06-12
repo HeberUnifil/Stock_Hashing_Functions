@@ -8,7 +8,6 @@
 Defina um grupo de 1 a 4 pessoas para realizar o desenvolvimento do seguinte projeto:
 
 Baseado no desenvolvimento da classe Vetor como um Tipo Abstrato de Dados e nas operações de inserção, busca e remoção, sugira o desenvolvimento de um projeto que envolva todas essas operações para realizar o armazenamento de dados, acesso e remoção dos mesmos:
-
 O projeto deve conter uma estrutura genérica utilizando TAD e deve permitir as operações básicas citadas anteriormente com o uso de funções hash.
 O projeto deve ser capaz, no mínimo, de lidar com tipos de dados int (Integer), String e Float.
 A apresentação deve se conter na explicação do tratamento do TAD e das funções hash criadas e como isso facilita a manutenção destes dados.
