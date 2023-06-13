@@ -19,197 +19,204 @@ public class Main {
                 System.out.println("0 - Sair");
                 System.out.println("________________");
 
-                int response1 = sc.nextInt();
-                int response2;
-                String responseString;
-                long responseLong;
-                double responseDouble;
+                try {
+                    int response1 = sc.nextInt();
 
+                    int response2;
+                    String responseString;
+                    long responseLong;
+                    double responseDouble;
 
-                switch (response1) {
-                    case 0:
-                        state = 0;
-                        break;
+                    switch (response1) {
+                        case 0:
+                            state = 0;
+                            break;
 
-                    case 1:
-                        System.out.println("Qual é o tipo de dado a ser manipulado?");
-                        System.out.println("1 - Nome (String)");
-                        System.out.println("2 - Código (Long)");
-                        System.out.println("3 - Tamanho (Double)");
-                        System.out.println("0 - voltar");
-                        System.out.println("________________");
+                        case 1:
+                            System.out.println("Qual é o tipo de dado a ser manipulado?");
+                            System.out.println("1 - Nome (String)");
+                            System.out.println("2 - Código (Long)");
+                            System.out.println("3 - Tamanho (Double)");
+                            System.out.println("0 - voltar");
+                            System.out.println("________________");
 
-                        response2 = sc.nextInt();
-                        switch (response2) {
-                            case 1:
-                                System.out.println("Qual é o nome do objeto a ser inserido?");
-                                System.out.println("0 - voltar");
-                                System.out.println("________________");
-                                responseString = sc.next();
-                                if (Objects.equals(responseString, "0")) {
+                            response2 = sc.nextInt();
+                            switch (response2) {
+                                case 1:
+                                    System.out.println("Qual é o nome do objeto a ser inserido?");
+                                    System.out.println("0 - voltar");
+                                    System.out.println("________________");
+                                    responseString = sc.next();
+                                    if (Objects.equals(responseString, "0")) {
+                                        break;
+
+                                    } else {
+                                        vnome.insert(responseString);
+                                    }
                                     break;
 
-                                } else {
-                                    vnome.insert(responseString);
-                                }
-                                break;
+                                case 2:
+                                    System.out.println("Qual é o código do objeto a ser inserido?");
+                                    System.out.println("0 - voltar");
+                                    System.out.println("________________");
+                                    responseLong = sc.nextLong();
+                                    if (responseLong == 0) {
+                                        break;
 
-                            case 2:
-                                System.out.println("Qual é o código do objeto a ser inserido?");
-                                System.out.println("0 - voltar");
-                                System.out.println("________________");
-                                responseLong = sc.nextLong();
-                                if (responseLong == 0) {
+                                    } else {
+                                        vcodigo.insert(responseLong);
+                                    }
                                     break;
 
-                                } else {
-                                    vcodigo.insert(responseLong);
-                                }
-                                break;
+                                case 3:
+                                    System.out.println("Qual é o tamanho do objeto a ser inserido?");
+                                    System.out.println("9 - voltar");
+                                    System.out.println("________________");
+                                    responseDouble = sc.nextDouble();
+                                    if (responseDouble == 9) {
+                                        break;
 
-                            case 3:
-                                System.out.println("Qual é o tamanho do objeto a ser inserido?");
-                                System.out.println("9 - voltar");
-                                System.out.println("________________");
-                                responseDouble = sc.nextDouble();
-                                if (responseDouble == 9) {
+                                    } else {
+                                        vtamanho.insert(responseDouble);
+                                    }
                                     break;
 
-                                } else {
-                                    vtamanho.insert(responseDouble);
-                                }
-                                break;
+                            }
+                            break;
 
-                        }
-                        break;
+                        case 2:
+                            System.out.println("Qual é o tipo de dado a ser manipulado?");
+                            System.out.println("1 - Nome (String)");
+                            System.out.println("2 - Código (Long)");
+                            System.out.println("3 - Tamanho (Double)");
+                            System.out.println("0 - voltar");
+                            System.out.println("________________");
 
-                    case 2:
-                        System.out.println("Qual é o tipo de dado a ser manipulado?");
-                        System.out.println("1 - Nome (String)");
-                        System.out.println("2 - Código (Long)");
-                        System.out.println("3 - Tamanho (Double)");
-                        System.out.println("0 - voltar");
-                        System.out.println("________________");
+                            response2 = sc.nextInt();
+                            switch (response2) {
+                                case 1:
+                                    System.out.println("Qual é o nome do objeto a ser buscado?");
+                                    System.out.println("9 - voltar");
+                                    System.out.println("________________");
+                                    responseString = sc.next();
+                                    if (Objects.equals(responseString, "9")) {
+                                        break;
 
-                        response2 = sc.nextInt();
-                        switch (response2) {
-                            case 1:
-                                System.out.println("Qual é o nome do objeto a ser buscado?");
-                                System.out.println("9 - voltar");
-                                System.out.println("________________");
-                                responseString = sc.next();
-                                if (Objects.equals(responseString, "9")) {
+                                    } else {
+                                        vnome.find(responseString);
+                                    }
                                     break;
 
-                                } else {
-                                    vnome.find(responseString);
-                                }
-                                break;
+                                case 2:
+                                    System.out.println("Qual é o código do objeto a ser buscado?");
+                                    System.out.println("9 - voltar");
+                                    System.out.println("________________");
+                                    responseLong = sc.nextLong();
+                                    if (responseLong == 9) {
+                                        break;
 
-                            case 2:
-                                System.out.println("Qual é o código do objeto a ser buscado?");
-                                System.out.println("9 - voltar");
-                                System.out.println("________________");
-                                responseLong = sc.nextLong();
-                                if (responseLong == 9) {
+                                    } else {
+                                        vcodigo.find(responseLong);
+                                    }
                                     break;
 
-                                } else {
-                                    vcodigo.find(responseLong);
-                                }
-                                break;
+                                case 3:
+                                    System.out.println("Qual é o tamanho do objeto a ser buscado?");
+                                    System.out.println("9 - voltar");
+                                    System.out.println("________________");
+                                    responseDouble = sc.nextDouble();
+                                    if (responseDouble == 9) {
+                                        break;
 
-                            case 3:
-                                System.out.println("Qual é o tamanho do objeto a ser buscado?");
-                                System.out.println("9 - voltar");
-                                System.out.println("________________");
-                                responseDouble = sc.nextDouble();
-                                if (responseDouble == 9) {
+                                    } else {
+                                        vtamanho.find(responseDouble);
+                                    }
                                     break;
 
-                                } else {
-                                    vtamanho.find(responseDouble);
-                                }
-                                break;
+                            }
+                            break;
 
-                        }
-                        break;
+                        case 3:
+                            System.out.println("Qual é o tipo de dado a ser manipulado?");
+                            System.out.println("1 - Nome (String)");
+                            System.out.println("2 - Código (Long)");
+                            System.out.println("3 - Tamanho (Double)");
+                            System.out.println("0 - voltar");
+                            System.out.println("________________");
 
-                    case 3:
-                        System.out.println("Qual é o tipo de dado a ser manipulado?");
-                        System.out.println("1 - Nome (String)");
-                        System.out.println("2 - Código (Long)");
-                        System.out.println("3 - Tamanho (Double)");
-                        System.out.println("0 - voltar");
-                        System.out.println("________________");
+                            response2 = sc.nextInt();
+                            switch (response2) {
+                                case 1:
+                                    System.out.println("Qual é o nome do objeto a ser apagado?");
+                                    System.out.println("9 - voltar");
+                                    System.out.println("________________");
+                                    responseString = sc.next();
+                                    if (Objects.equals(responseString, "9")) {
+                                        break;
 
-                        response2 = sc.nextInt();
-                        switch (response2) {
-                            case 1:
-                                System.out.println("Qual é o nome do objeto a ser apagado?");
-                                System.out.println("9 - voltar");
-                                System.out.println("________________");
-                                responseString = sc.next();
-                                if (Objects.equals(responseString, "9")) {
+                                    } else {
+                                        vnome.delete(responseString);
+                                    }
                                     break;
 
-                                } else {
-                                    vnome.delete(responseString);
-                                }
-                                break;
+                                case 2:
+                                    System.out.println("Qual é o código do objeto a ser apagado?");
+                                    System.out.println("9 - voltar");
+                                    System.out.println("________________");
 
-                            case 2:
-                                System.out.println("Qual é o código do objeto a ser apagado?");
-                                System.out.println("9 - voltar");
-                                System.out.println("________________");
+                                    responseLong = sc.nextLong();
+                                    if (responseLong == 9) {
+                                        break;
 
-                                responseLong = sc.nextLong();
-                                if (responseLong == 9) {
+                                    } else {
+                                        vcodigo.delete(responseLong);
+                                    }
                                     break;
 
-                                } else {
-                                    vcodigo.delete(responseLong);
-                                }
-                                break;
+                                case 3:
+                                    System.out.println("Qual é o tamanho do objeto a ser buscado?");
+                                    System.out.println("9 - voltar");
+                                    System.out.println("________________");
+                                    responseDouble = sc.nextDouble();
+                                    if (responseDouble == 9) {
+                                        break;
 
-                            case 3:
-                                System.out.println("Qual é o tamanho do objeto a ser buscado?");
-                                System.out.println("9 - voltar");
-                                System.out.println("________________");
-                                responseDouble = sc.nextDouble();
-                                if (responseDouble == 9) {
+                                    } else {
+                                        vtamanho.find(responseDouble);
+                                    }
                                     break;
 
-                                } else {
-                                    vtamanho.find(responseDouble);
-                                }
-                                break;
+                            }
+                            break;
 
-                        }
-                        break;
+                        case 4:
+                            System.out.println("Qual é o tipo de dado a ser manipulado?");
+                            System.out.println("1 - Nome (String)");
+                            System.out.println("2 - Código (Long)");
+                            System.out.println("3 - Tamanho (Double)");
+                            System.out.println("0 - voltar");
+                            System.out.println("________________");
 
-                    case 4:
-                        System.out.println("Qual é o tipo de dado a ser manipulado?");
-                        System.out.println("1 - Nome (String)");
-                        System.out.println("2 - Código (Long)");
-                        System.out.println("3 - Tamanho (Double)");
-                        System.out.println("0 - voltar");
-                        System.out.println("________________");
+                            response2 = sc.nextInt();
+                            switch (response2) {
+                                case 1:
+                                    vnome.show();
+                                    break;
 
-                        response2 = sc.nextInt();
-                        switch (response2) {
-                            case 1:
-                                vnome.show();
-                                break;
-
-                            case 2:
-                                vcodigo.show();
-                                break;
-                            case 3:
-                                vtamanho.show();
-                                break;
-                        }
-                        break;
+                                case 2:
+                                    vcodigo.show();
+                                    break;
+                                case 3:
+                                    vtamanho.show();
+                                    break;
+                            }
+                            break;
+                    }
+                } catch (Exception e) {
+                    System.out.println("Inserção incorreta !");
+                    System.out.println("Tente novamente !");
+                    System.out.println("");
+                    sc.nextLine();
                 }
             }
         }
