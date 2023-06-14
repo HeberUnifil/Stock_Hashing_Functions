@@ -4,13 +4,24 @@ public class Main {
     public static void main(String[] args) {
         int state = 9;
         Scanner sc = new Scanner(System.in);
-        Vetor<String> vnome = new Vetor<String>(70);
-        Vetor<Long> vcodigo = new Vetor<Long>(70);
-        Vetor<Double> vtamanho = new Vetor<Double>(70);
+        Vetor<String> vnome = new Vetor<String>(30);
+        Vetor<Long> vcodigo = new Vetor<Long>(30);
+        Vetor<Double> vtamanho = new Vetor<Double>(30);
 
         while (state != 0) {
             if (state == 9) {
-
+                System.out.println("______________________________________________________________________");
+                System.out.print("| Todos os Nomes (String)      | [");
+                vnome.show();
+                System.out.println("]");
+                System.out.print("| Todos os Códigos (Long)      | [");
+                vcodigo.show();
+                System.out.println("]");
+                System.out.print("| Todos os Tamanhos (Double)   | [");
+                vtamanho.show();
+                System.out.println("]");
+                System.out.println("|_____________________________________________________________________");
+                System.out.println("");
                 System.out.println("Que tipo de tarefa deseja efetuar?");
                 System.out.println("1 - Inserção");
                 System.out.println("2 - Busca");
